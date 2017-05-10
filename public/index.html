@@ -9,7 +9,20 @@
 </head>
 <body>
 
-<p> It's more than a touch boring, really. How are you?</p>
+<p> It's more than a touch boring, really. How are you!?</p>
 
+
+<script src = "/socket.io/socket.io.js"> </script>
+<script>
+var socket = io();
+
+socket.on('connect',() => {
+  console.log('Connected to Server')
+});
+
+socket.on('disconnect', () => {
+  console.log('Disconnected from Server!');
+});
+</script>
 </body>
 </html>
