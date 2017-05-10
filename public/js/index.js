@@ -1,5 +1,3 @@
-
-
 var socket = io();
 
 socket.on('connect', function ()  {
@@ -8,4 +6,8 @@ socket.on('connect', function ()  {
 
 socket.on('disconnect', function ()  {
   console.log('Disconnected from Server!');
+});
+
+socket.on('newEmail', function (email) {
+  console.log('New email', email);
 });
